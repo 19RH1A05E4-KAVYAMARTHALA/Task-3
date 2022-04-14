@@ -1,0 +1,12 @@
+package com.Task3.service;
+
+import java.util.List;
+
+import com.Task3.model.Criminal;
+
+public interface IService {
+	void add(Criminal cr);
+	void delete(Criminal cr);
+	void update(Criminal cr);
+	List<Criminal> selection();
+}
