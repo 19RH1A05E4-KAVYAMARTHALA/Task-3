@@ -1,18 +1,14 @@
 package com.Task3.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+
 
 @Table(name = "Criminal")
 @Entity
 
 public class Criminal {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	//@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 
 	@Column(name = "Name")
@@ -21,8 +17,8 @@ public class Criminal {
 	@Column(name = "Aadhar")
 	private String aadhar;
 
-	@Column(name = "Mobile Number")
-	private String mobile_num;
+	@Column(name = "Mobile")
+	private String mobile;
 	
 	@Column(name = "Crime")
 	private String crime;
@@ -31,12 +27,12 @@ public class Criminal {
 		
 	}
 
-	public Criminal(int id, String name, String aadhar, String mobile_num, String crime) {
+	public Criminal(int id, String name, String aadhar, String mobile, String crime) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.aadhar = aadhar;
-		this.mobile_num = mobile_num;
+		this.mobile = mobile;
 		this.crime = crime;
 	}
 
@@ -64,12 +60,12 @@ public class Criminal {
 		this.aadhar = aadhar;
 	}
 
-	public String getMobile_num() {
-		return mobile_num;
+	public String getMobile() {
+		return mobile;
 	}
 
-	public void setMobile_num(String mobile_num) {
-		this.mobile_num = mobile_num;
+	public void setMobile(String mobile) {
+		this.mobile = mobile;
 	}
 
 	public String getCrime() {
@@ -82,7 +78,7 @@ public class Criminal {
 
 	@Override
 	public String toString() {
-		return "Criminal [id=" + id + ", name=" + name + ", aadhar=" + aadhar + ", mobile_num=" + mobile_num
+		return "Criminal [id=" + id + ", name=" + name + ", aadhar=" + aadhar + ", mobile=" + mobile
 				+ ", crime=" + crime + "]";
 	}
 	
